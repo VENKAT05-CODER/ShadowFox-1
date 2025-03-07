@@ -197,36 +197,33 @@
 </head>
 <body>
     <div class="container">
-        <!-- Background Video -->
         <video autoplay muted loop class="video-bg">
             <source src="C:\Users\venka\OneDrive\Desktop\Fanpage\fan.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="blur-overlay"></div>
 
-        <!-- Logo -->
         <div class="logo">
             <img src="ipl logo.png" alt="IPL Logo">
         </div>
 
-        <!-- Background Logo -->
+
         <div class="background">
             <img src="https://i.postimg.cc/KYWQRc5K/csblogo.png" id="logobg" alt="Team Logo">
         </div>
 
-        <!-- Heading Section -->
+
         <div class="heading">
             <h1 id="head">Royal Challengers Bangalore</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <button>WATCH NOW</button>
         </div>
 
-        <!-- Main Image -->
+    
         <div class="image">
             <img id="myimage" src="https://assets.iplt20.com/ipl/IPLHeadshot2022/164.png" alt="Team Image">
         </div>
 
-        <!-- Navbar -->
         <div class="navbar">
             <ul>
                 <li>Home</li>
@@ -236,10 +233,9 @@
             </ul>
         </div>
 
-        <!-- Empty Div -->
+    
         <div class="empty"></div>
 
-        <!-- Team List -->
         <div class="list">
             <ol>
                 <li onclick="myFun('csk final.avif', 'gold', 'Chennai Super Kings', 'https://i.postimg.cc/WzG7WGcr/csk3.png', 'The Chennai Super Kings, led by the legendary MS Dhoni, are one of the most successful teams in IPL history. Known for their consistency and strong fan base, CSK has won multiple IPL titles and is famous for its ')">CSK</li>
@@ -256,27 +252,14 @@
 
     <script>
         function myFun(image, colour, head, logo, description) {
-            // Update the main image
             document.getElementById('myimage').src = image;
-
-            // Update the empty div background color
             document.querySelector('.empty').style.backgroundColor = colour;
-
-            // Update the button background color
             document.querySelector('.heading button').style.backgroundColor = colour;
-
-            // Update the heading text and color
             const heading = document.getElementById('head');
             heading.innerHTML = head;
-            heading.style.color = colour; // Change the team name color
-
-            // Update the background logo
+            heading.style.color = colour;
             document.getElementById('logobg').src = logo;
-
-            // Update the description text
             document.querySelector('.heading p').innerHTML = description;
-
-            // Update the navbar items' color
             const navItems = document.querySelectorAll('.navbar ul li');
             navItems.forEach(item => {
                 item.style.color = colour;
