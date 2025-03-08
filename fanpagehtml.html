@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Fan Page</title>
+    <link rel="stylesheet" href="fanpagecss.css">
+</head>
+<body>
+    <div class="container">
+        <video autoplay muted loop class="video-bg">
+            <source src="C:\Users\venka\OneDrive\Desktop\Fanpage\fan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="blur-overlay"></div>
+
+        <div class="logo">
+            <img src="ipl logo.png" alt="IPL Logo">
+        </div>
+
+        <div class="background">
+            <img src="https://i.postimg.cc/KYWQRc5K/csblogo.png" id="logobg" alt="Team Logo">
+        </div>
+
+        <div class="heading">
+            <h1 id="head">Royal Challengers Bangalore</h1>
+            <p id="description">The Royal Challengers Bangalore, led by Faf du Plessis, are one of the most popular teams in the IPL. Known for their star-studded lineup and passionate fan base, RCB is always a strong contender for the title.</p>
+            <a href="https://www.iplt20.com" target="_blank">
+                <button>WATCH NOW</button>
+            </a>
+        </div>
+
+        <div class="image">
+            <img id="myimage" src="https://assets.iplt20.com/ipl/IPLHeadshot2022/164.png" alt="Team Image">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li onclick="showHome()">Home</li>
+                <li onclick="showTeam()">Team</li>
+                <li onclick="showPerformance()">Performance</li>
+                <li onclick="showRank()">Rank</li>
+            </ul>
+        </div>
+
+        <div class="empty"></div>
+
+        <div class="list">
+            <ol>
+                <li onclick="myFun('csk final.png', 'gold', 'Chennai Super Kings', 'https://i.postimg.cc/WzG7WGcr/csk3.png', 'The Chennai Super Kings, led by MS Dhoni, are one of the most successful teams in IPL history. Known for their consistency and strong fan base, CSK has won multiple IPL titles.')">CSK</li>
+                <li onclick="myFun('dc final.png', 'blue', 'Delhi Capitals', 'https://i.postimg.cc/jjD400rR/ddlogo.png', 'The Delhi Capitals, led by Rishabh Pant, have emerged as a strong contender in recent years. With a mix of young talent and experienced players, DC is known for its aggressive gameplay.')">DC</li>
+                <li onclick="myFun('mi final.png', 'dodgerblue', 'Mumbai Indians', 'https://i.postimg.cc/9QnyB8wK/milogo.png', 'The Mumbai Indians, led by Hardik Pandya, are the most successful team in IPL history with multiple titles. Known for their strong batting lineup and exceptional bowling attack.')">MI</li>
+                <li onclick="myFun('srh team-Photoroom.png', 'orangered', 'Sunrisers Hyderabad', 'https://i.postimg.cc/W1hktGYn/srhlogo.png', 'The Sunrisers Hyderabad, led by Aiden Markram, have a reputation for strong bowling performances. With players like Bhuvneshwar Kumar, SRH is a tough team to beat.')">SRH</li>
+                <li onclick="myFun('pb final.png', 'red', 'Punjab Kings', 'https://i.postimg.cc/mgDQCfk7/kplogo.png', 'The Punjab Kings, led by Shikhar Dhawan, are known for their explosive batting lineup. Despite not winning an IPL title yet, they are always a team to watch out for.')">PBKS</li>
+                <li onclick="myFun('rr final.png', '#ff3385', 'Rajasthan Royals', 'https://i.postimg.cc/L5D1gNMy/rrlogo.png', 'The Rajasthan Royals, led by Sanju Samson, are known for nurturing young talent. With players like Jos Buttler, RR is a team that combines youth and experience.')">RR</li>
+                <li onclick="myFun('kkr final.png', 'purple', 'Kolkata Knight Riders', 'https://i.postimg.cc/MTR0H7T4/kkrlogo.png', 'The Kolkata Knight Riders, led by Shreyas Iyer, are known for their purple and gold jersey. With two IPL titles, KKR is famous for its strong all-round performances.')">KKR</li>
+                <li onclick="myFun('https://assets.iplt20.com/ipl/IPLHeadshot2022/164.png', 'red', 'Royal Challengers Bangalore', 'https://i.postimg.cc/KYWQRc5K/csblogo.png', 'The Royal Challengers Bangalore, led by Faf du Plessis, are one of the most popular teams in the IPL. Known for their star-studded lineup and passionate fan base.')">RCB</li>
+            </ol>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About IPL 2024</h3>
+                <p>The Indian Premier League (IPL) 2024 is the 17th season of the tournament. It features 10 teams competing for the coveted trophy. Stay tuned for exciting matches and thrilling performances!</p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://youtube.com" target="_blank">YouTube</a>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@ipl2024.com</p>
+                <p>Phone: +91 12345 67890</p>
+                <p>Address: IPL Headquarters, Mumbai, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 IPL Fan Page. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentTeam = {
+            name: "Royal Challengers Bangalore",
+            color: "red",
+            logo: "https://i.postimg.cc/KYWQRc5K/csblogo.png",
+            description: "The Royal Challengers Bangalore, led by Faf du Plessis, are one of the most popular teams in the IPL. Known for their star-studded lineup and passionate fan base, RCB is always a strong contender for the title.",
+            image: "https://assets.iplt20.com/ipl/IPLHeadshot2022/164.png",
+            team: ["Faf du Plessis", "Virat Kohli", "Glenn Maxwell", "Mohammed Siraj"],
+            performance: ["Winners: 0", "Runners-up: 3", "Playoffs: 6"],
+            rank: "5th in IPL 2024"
+        };
+
+        function myFun(image, colour, head, logo, description) {
+            currentTeam = {
+                name: head,
+                color: colour,
+                logo: logo,
+                description: description,
+                image: image,
+                team: getTeamDetails(head),
+                performance: getPerformanceDetails(head),
+                rank: getRankDetails(head)
+            };
+
+            document.getElementById('myimage').src = image;
+            document.querySelector('.empty').style.backgroundColor = colour;
+            document.querySelector('.heading button').style.backgroundColor = colour;
+            const heading = document.getElementById('head');
+            heading.innerHTML = head;
+            heading.style.color = colour;
+            document.getElementById('logobg').src = logo;
+            document.getElementById('description').innerHTML = description;
+            const navItems = document.querySelectorAll('.navbar ul li');
+            navItems.forEach(item => {
+                item.style.color = colour;
+            });
+        }
+
+        function showHome() {
+            document.getElementById('description').innerHTML = currentTeam.description;
+        }
+
+        function showTeam() {
+            document.getElementById('description').innerHTML = `Team: ${currentTeam.team.join(", ")}`;
+        }
+
+        function showPerformance() {
+            document.getElementById('description').innerHTML = `Performance: ${currentTeam.performance.join(", ")}`;
+        }
+
+        function showRank() {
+            document.getElementById('description').innerHTML = `Rank: ${currentTeam.rank}`;
+        }
+
+        function getTeamDetails(teamName) {
+            const teams = {
+                "Chennai Super Kings": ["MS Dhoni", "Ruturaj Gaikwad", "Ravindra Jadeja", "Deepak Chahar"],
+                "Delhi Capitals": ["Rishabh Pant", "David Warner", "Axar Patel", "Anrich Nortje"],
+                "Mumbai Indians": ["Hardik Pandya", "Jasprit Bumrah", "Suryakumar Yadav", "Ishan Kishan"],
+                "Sunrisers Hyderabad": ["Aiden Markram", "Bhuvneshwar Kumar", "Rahul Tripathi", "Abdul Samad"],
+                "Punjab Kings": ["Shikhar Dhawan", "Kagiso Rabada", "Liam Livingstone", "Arshdeep Singh"],
+                "Rajasthan Royals": ["Sanju Samson", "Jos Buttler", "Yuzvendra Chahal", "Trent Boult"],
+                "Kolkata Knight Riders": ["Shreyas Iyer", "Andre Russell", "Sunil Narine", "Varun Chakravarthy"],
+                "Royal Challengers Bangalore": ["Faf du Plessis", "Virat Kohli", "Glenn Maxwell", "Mohammed Siraj"]
+            };
+            return teams[teamName];
+        }
+
+        function getPerformanceDetails(teamName) {
+            const performances = {
+                "Chennai Super Kings": ["Winners: 5", "Runners-up: 5", "Playoffs: 12"],
+                "Delhi Capitals": ["Winners: 0", "Runners-up: 2", "Playoffs: 5"],
+                "Mumbai Indians": ["Winners: 6", "Runners-up: 1", "Playoffs: 10"],
+                "Sunrisers Hyderabad": ["Winners: 1", "Runners-up: 1", "Playoffs: 6"],
+                "Punjab Kings": ["Winners: 0", "Runners-up: 1", "Playoffs: 3"],
+                "Rajasthan Royals": ["Winners: 1", "Runners-up: 1", "Playoffs: 4"],
+                "Kolkata Knight Riders": ["Winners: 3", "Runners-up: 1", "Playoffs: 6"],
+                "Royal Challengers Bangalore": ["Winners: 0", "Runners-up: 3", "Playoffs: 6"]
+            };
+            return performances[teamName];
+        }
+
+        function getRankDetails(teamName) {
+            const ranks = {
+                "Chennai Super Kings": "1st in IPL 2024",
+                "Delhi Capitals": "6th in IPL 2024",
+                "Mumbai Indians": "3rd in IPL 2024",
+                "Sunrisers Hyderabad": "7th in IPL 2024",
+                "Punjab Kings": "5th in IPL 2024",
+                "Rajasthan Royals": "2nd in IPL 2024",
+                "Kolkata Knight Riders": "4th in IPL 2024",
+                "Royal Challengers Bangalore": "8th in IPL 2024"
+            };
+            return ranks[teamName];
+        }
+    </script>
+</body>
+</html>
